@@ -1,0 +1,33 @@
+version: "3.3"
+
+services:
+  server:
+    build: .
+    image: server
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - 443:443
+      - 3000:3000
+    working_dir: /usr/src/app
+    command: bash -c "python3 -m sim.server.server"
+
+  seed:
+    build: .
+    image: seeder
+    volumes:
+      - ./:/usr/src/app
+    working_dir: /usr/src/app
+    command: bash -c "( cd certs; ./generate_keys.sh); ./initialize-database.sh"
+
+  # client:
+  #   build: .
+  #   image: client
+  #   stdin_open: true
+  #   tty: true
+  #   environment: 
+  #     - HOSTNAME=server
+  #   volumes:
+  #     - ./:/usr/src/app
+  #   working_dir: /usr/src/app
+  #   entrypoint: "python3 -m sim.client "

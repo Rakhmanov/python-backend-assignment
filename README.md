@@ -1,5 +1,10 @@
-# Company Backend Simulation
+# Take home interview project from 2020
+# Python, AlchemySQL, Server, Client, Docker, Certs
 
+# [Getting Started](GETTING_STARTED.md)
+
+## Some Company Backend Simulation
+ 
 Hello and welcome to the Company backend simulation!  This exercise is intended
 to give us a chance to see your approach to building, reviewing and discussing
 software and is intended to take around 3-4 hours total.  When complete, we'll
@@ -45,19 +50,7 @@ presentable.  Despite the ludicrous premise, treat this code like it is being
 deployed into a production environment.  As much as possible, try to make the
 code reflective of the quality of work that you normally provide.
 
-## Getting Started
-
-Steps to getting this running locally:
-1. Ensure you have python3 running locally (tested against v3.6.6).
-2. [optional, only needed if you want to isolate this python environment]
-   Create and activate  a local virtualenv: `python3 -m venv .virtualenv; .
-   .virtualenv/bin/activate` 
-3. Install the necessary python modules:  `pip3 install -r requirements.txt`
-4. Initialize the database: `./initialize-database.sh`
-4. Start coding!  There are a handful of shell scripts you can use for running
-   the various parts of the sim which might be a good place to look first.
-
-
 If you have any questions about the sim or anything related to the process,
 don't hesitate to reach out and ask us.  We look forward to seeing what you put
 together!
+
